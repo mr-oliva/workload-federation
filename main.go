@@ -61,7 +61,7 @@ func main() {
 }
 
 func (a *A) handler(w http.ResponseWriter, r *http.Request) {
-	user, err := a.client.Users().ByUserId("").Get(a.ctx, nil)
+	user, err := a.client.Users().ByUserId("547fa9ec-60a9-4461-8d60-4b2b331e478e").Get(a.ctx, nil)
 	if err != nil {
 		log.Fatal(err)
 		w.WriteHeader(http.StatusInternalServerError)
